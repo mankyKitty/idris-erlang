@@ -12,7 +12,8 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 data-files:          irts/*.erl
-                   , irts/*.beam
+                   -- These files can't be included, must be built.
+                   -- , irts/*.beam
 
 executable idris-erlang
   main-is:             Main.hs
@@ -21,7 +22,7 @@ executable idris-erlang
 
   build-depends:       base >=4 && <5
                      , containers >= 0.5 && < 0.6
-                     , idris > 0.9.17
+                     , idris > 0.9.18
                      , mtl >= 2.2.1 && < 2.3
                      , transformers < 0.5
                      , directory >= 1.2 && < 1.3
